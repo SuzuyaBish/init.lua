@@ -11,20 +11,20 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local lazy_config = require "configs.lazy"
+local lazy_config = require "suzuyabish.configs.lazy"
 
 -- load plugins
 require("lazy").setup({
-  { import = "plugins" },
+  { import = "suzuyabish.plugins" },
 }, lazy_config)
 
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
-require "options"
-require "autocmds"
+require "suzuyabish.options"
+require "suzuyabish.autocmds"
 
 vim.schedule(function()
-  require "mappings"
+  require "suzuyabish.mappings"
 end)
